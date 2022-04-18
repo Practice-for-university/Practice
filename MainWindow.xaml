@@ -1,0 +1,48 @@
+﻿<Window x:Class="Практика_2._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практика_2._0"
+        mc:Ignorable="d"
+        Title="АЛЬФА ВЕРСИЯ 0.1.0.0.3" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="AlloyGrider" AutoGenerateColumns="False" GridLinesVisibility="Horizontal">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="5*" IsReadOnly="False" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="C" Width="*" IsReadOnly="False" Binding="{Binding Path=C}"/>
+                <DataGridTextColumn Header="Si" Width="*" IsReadOnly="False" Binding="{Binding Path=Si}"/>
+                <DataGridTextColumn Header="Mn" Width="*" IsReadOnly="False" Binding="{Binding Path=Mn}"/>
+                <DataGridTextColumn Header="Ni" Width="*" IsReadOnly="False" Binding="{Binding Path=Ni}"/>
+                <DataGridTextColumn Header="Mo" Width="*" IsReadOnly="False" Binding="{Binding Path=Mo}"/>
+                <DataGridTextColumn Header="Cr" Width="*" IsReadOnly="False" Binding="{Binding Path=Cr}"/>
+                <DataGridTextColumn Header="Cu" Width="*" IsReadOnly="False" Binding="{Binding Path=Cu}"/>
+                <DataGridTextColumn Header="V" Width="*" IsReadOnly="False" Binding="{Binding Path=V}"/>
+                <DataGridTextColumn Header="B" Width="*" IsReadOnly="False" Binding="{Binding Path=B}"/>
+                <DataGridTextColumn Header="Seq" Width="*" IsReadOnly="True" Binding="{Binding Path=Ceq}"/>
+                <DataGridTextColumn Header="SET" Width="*" IsReadOnly="True" Binding="{Binding Path=SET}"/>
+                <DataGridTextColumn Header="Рст." Width="*" IsReadOnly="True" Binding="{Binding Path=Pct}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Grid.Column="1" Grid.Row="0" Margin="10 30 10 100" Text="1) Чтобы создать новый сплав - кликните по любой части пустой последней строки.                                                     2) Чтобы изменить его - кликните по интересующему элементу (название/C и тд)                                                     3) Чтобы удалить сплав сначала кликните на строку оного, чтобы его выделить, и нажмите кнопку Delete на клавиатуре." TextWrapping="Wrap" TextAlignment="Left"/>
+        <Button Name="Setter_table_b" Grid.Column="1" Grid.Row="0" Content="Настройки таблицы" Margin ="10 0 10 0" VerticalAlignment="Bottom" MinHeight="40"/>
+        <Button Name="Setter_form_b" Grid.Column="1" Grid.Row="0" Content="Настройки окна" Margin ="10 0 10 40" VerticalAlignment="Bottom" MinHeight="40" Click="Setter_form_b_Click"/>
+        <Button Name="Exit_b" Grid.Column="1" Grid.Row="1" Content="Выход" Margin ="10 0 10 20" VerticalAlignment="Bottom" MinHeight="40" Click="Exit_b_Click"/>
+        <TextBox Name="Search_line" Height="32" Margin="40,0,75,0" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Поле ввода" Padding="8" VerticalAlignment="Center" MinHeight="40" MinWidth="420" FontSize="16" TextAlignment="Center" TextDecorations="{x:Null}"/>
+        <ComboBox Name="Search_filter" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="40" MinHeight="40">
+            <TextBlock>Именование</TextBlock>
+            <TextBlock>Seq</TextBlock>
+            <TextBlock>SET</TextBlock>
+            <TextBlock>Pст.</TextBlock>
+        </ComboBox>    
+        <Button Name="Search_b" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" MinHeight="40" MinWidth="75" Content="Поиск" IsDefault="True" Click="Search_b_Click" />
+    </Grid>
+</Window>

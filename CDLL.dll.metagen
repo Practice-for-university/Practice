@@ -1,0 +1,44 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CDLL, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Metals.MetalWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Double, Double, Double, Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCeq(): PrivateScope, Public, HideBySig
+    getCet(): PrivateScope, Public, HideBySig
+    getPem(): PrivateScope, Public, HideBySig
+    GetC(): PrivateScope, Public, HideBySig
+    GetSi(): PrivateScope, Public, HideBySig
+    GetMn(): PrivateScope, Public, HideBySig
+    GetNi(): PrivateScope, Public, HideBySig
+    GetMo(): PrivateScope, Public, HideBySig
+    GetCr(): PrivateScope, Public, HideBySig
+    GetCu(): PrivateScope, Public, HideBySig
+    GetV(): PrivateScope, Public, HideBySig
+    GetB(): PrivateScope, Public, HideBySig
+    SetC(Double): PrivateScope, Public, HideBySig
+    SetSi(Double): PrivateScope, Public, HideBySig
+    SetMn(Double): PrivateScope, Public, HideBySig
+    SetNi(Double): PrivateScope, Public, HideBySig
+    SetMo(Double): PrivateScope, Public, HideBySig
+    SetCr(Double): PrivateScope, Public, HideBySig
+    SetCu(Double): PrivateScope, Public, HideBySig
+    SetV(Double): PrivateScope, Public, HideBySig
+    SetB(Double): PrivateScope, Public, HideBySig
+    SetMark(String): PrivateScope, Public, HideBySig
+    GetMark(): PrivateScope, Public, HideBySig
+Class Metals.MetalStorage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetValue(Int32): PrivateScope, Public, HideBySig
+    Add(MetalWrapper): PrivateScope, Public, HideBySig
+    Pop(): PrivateScope, Public, HideBySig
+    ShowStorage(): PrivateScope, Public, HideBySig
+    GetSize(): PrivateScope, Public, HideBySig
+    Replace(MetalWrapper, Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
